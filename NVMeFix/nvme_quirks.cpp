@@ -89,6 +89,8 @@ static constexpr struct pci_device_id nvme_id_table[] = {
 	{ 0x8086, 0x5845,   /* Qemu emulated controller */
 		NVME_QUIRK_IDENTIFY_CNS |
 				NVME_QUIRK_DISABLE_WRITE_ZEROES, },
+	{ 0x1959, 0x1c5c,   /* Sk hynix pc611 */
+		NVME_QUIRK_DELAY_BEFORE_CHK_RDY, },
 	{ 0x1bb1, 0x0100,   /* Seagate Nytro Flash Storage */
 		NVME_QUIRK_DELAY_BEFORE_CHK_RDY, },
 	{ 0x1c58, 0x0003,   /* HGST adapter */
